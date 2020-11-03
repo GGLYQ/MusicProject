@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script crossorigin="anonymous" src="https://cdn.bootcdn.net/ajax/libs/axios/0.20.0/axios.min.js"></script>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/iconfont.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- 播放器主体区域 -->
+    <div class="play_wrap" id="player">
+      <div class="search_bar clearfix">
+        <img src="./images/logo1.png" alt="">
+        <!-- 搜索歌曲 -->
+        <span class="iconfont icon-chaxun"></span>
+        <input type="text" autocomplete="off" v-model="query" @keyup.enter="searchMusic">
+      </div>
+      <div class="center_con">
+        <!-- 搜索歌曲列表 -->
+        <div class="song_wrapper">
+          <ul class="song_list">
+            <li class="clearfix" v-for="item in musicList">
+              <a href="javascript:;" class="iconfont icon-dianbokai" @click="playMusic(item.id)"></a>
+              <div class="name_box">
+                <span class="song_name">{{item.name}}</span>
+              </div>
+              <span v-if="item.mvid!=0" @click="playMV(item.mvid)"><i class="iconfont icon-luxiang"></i></span>
+            </li>
+          </ul>
+
+        </div>
+        <!-- 歌曲信息容器 -->
+        <div class="player_con">
+          <div class="line1"></div>
+
+          <div class="line2"></div>
+          <!-- 黑色唱片部分 -->
+          <div class="recordBox">
+            <div class="recordBlack">
+              <div class="recordIn" :class="{playing:isPlaying}">
+                <div class="lines"></div>
+                <img class="cd" :src="musicCover" onerror="this.src='./images/背景.jpeg'">
+                <!-- 圆心 -->
+                <div class="circle"></div>
+              </div>
+              <!-- 光 -->
+              <div class="sun"></div>
+            </div>
+            <div class="fixed">
+              <div class="arm" :class="{playing_:isPlaying}"></div>
+            </div>
+          </div>
+          <!-- 正在播放的歌曲信息 -->
+        </div>
+        <!-- 评论容器 -->
+        <div class="comment_wrapper">
+          <h5 class="title">热门留言</h5>
+          <div class="comment_list">
+            <dl v-for="item in hotComments">
+              <dt><img :src="item.user.avatarUrl"></dt>
+              <dd class="name"> {{item.user.nickname}}</dd>
+              <dd class="detail">{{item.content}}</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="audio_con">
+        <audio ref="audio" @play="play" @pause="pause" :src="musicUrl" controls="controls" autoplay="autoplay"
+          loop="loop" class="myAudio"></audio>
+      </div>
+      <div class="video_con" v-show="isShow" style="display: none;">
+        <video ref="video" :src="mvUrl" controls="controls" class="video_dialog"></video>
+        <div class="mask" @click="hide"></div>
+      </div>
+
+    </div>
+  </div>
+  <script src="./js/mian.js"></script>
+</body>
+
+</html>

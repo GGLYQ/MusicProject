@@ -1,0 +1,184 @@
+{
+  "id": "2125000",
+  "name": "lyq",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17654812",
+      "name": "本地录音",
+      "font_class": "bendiluyin",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "17654813",
+      "name": "查询",
+      "font_class": "chaxun",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "17654814",
+      "name": "本地文件",
+      "font_class": "bendiwenjian",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "17654815",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "17654816",
+      "name": "截图",
+      "font_class": "jietu",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "17654817",
+      "name": "点播开",
+      "font_class": "dianbokai",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "17654818",
+      "name": "平台",
+      "font_class": "pingtai",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "17654819",
+      "name": "电子地图",
+      "font_class": "dianziditu",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "17654820",
+      "name": "管理",
+      "font_class": "guanli",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "17654821",
+      "name": "录像",
+      "font_class": "luxiang",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "17654822",
+      "name": "环境监控",
+      "font_class": "huanjingjiankong",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "17654823",
+      "name": "视频回传",
+      "font_class": "shipinhuichuan",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "17654824",
+      "name": "暂停",
+      "font_class": "zanting",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "17654825",
+      "name": "声音关",
+      "font_class": "shengyinguan",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "17654826",
+      "name": "声音开",
+      "font_class": "shengyinkai",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "17654827",
+      "name": "云台",
+      "font_class": "yuntai",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "17654828",
+      "name": "文件",
+      "font_class": "wenjian",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "17654829",
+      "name": "我的项目",
+      "font_class": "wodexiangmu",
+      "unicode": "e646",
+      "unicode_decimal": 58950
+    },
+    {
+      "icon_id": "17654830",
+      "name": "全屏",
+      "font_class": "quanping",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "17654831",
+      "name": "我的待办",
+      "font_class": "wodedaiban",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "17654832",
+      "name": "资源",
+      "font_class": "ziyuan",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "17654833",
+      "name": "视频监控",
+      "font_class": "shipinjiankong",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "17654834",
+      "name": "下载",
+      "font_class": "xiazai",
+      "unicode": "e64b",
+      "unicode_decimal": 58955
+    },
+    {
+      "icon_id": "17521471",
+      "name": "右收起",
+      "font_class": "youshouqi",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "17521472",
+      "name": "左收起",
+      "font_class": "zuoshouqi",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    }
+  ]
+}

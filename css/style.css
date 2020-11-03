@@ -1,0 +1,391 @@
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+html,
+body {
+  height: 100%;
+  background-image: url("../images/背景2.jpg");
+  background-size: cover;
+}
+
+.wrap {
+  height: 100%;
+}
+
+.play_wrap {
+  width: 85%;
+  height: 800px;
+  background-color: rgba(243, 241, 241, 0.3);
+  margin: 20px auto;
+  border-radius: 10px;
+  position: relative;
+}
+
+.search_bar {
+  width: 100%;
+  height: 70px;
+  background-color: #3C828E;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.search_bar img {
+  width: 80px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.search_bar input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  float: right;
+  margin: 15px 25px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  text-indent: 8%;
+}
+
+.search_bar span {
+  font-size: 25px;
+  float: right;
+  color: whitesmoke;
+  position: absolute;
+  top: 23px;
+  right: 40px;
+}
+
+.center_con {
+  width: 100%;
+  height: 685px;
+}
+
+.song_wrapper {
+  width: 25%;
+  height: 100%;
+  float: left;
+  overflow-y: scroll;
+  /* scrollbar-width:none; */
+}
+
+.song_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.song_list {
+  margin-top: 20px;
+}
+
+.song_list li {
+  width: 90%;
+  height: 50px;
+  margin: 0 auto;
+  line-height: 50px;
+  font-family: "楷体";
+  position: relative;
+}
+
+.song_list li:nth-child(Odd) {
+  background-color: rgba(250, 237, 237, 0.171);
+}
+
+.song_list a {
+  color: rgb(230, 48, 48);
+  text-decoration: none;
+  position: absolute;
+  left: 8px;
+}
+
+.song_list .name_box {
+  width: 63%;
+  height: 50px;
+  position: absolute;
+  left: 38px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.song_list .song_name {
+  font-size: 23px;
+  color: rgb(202, 202, 202);
+}
+
+.song_list i {
+  position: absolute;
+  right: 20px;
+}
+
+.line1,
+.line2 {
+  width: 2px;
+  height: 500px;
+  background: linear-gradient(244deg, rgba(255, 255, 255, 0) 0%, rgb(206, 204, 204) 50%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+}
+
+.player_con .line1 {
+  left: 2px;
+}
+
+.player_con {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+  /* background-color: red; */
+}
+
+.player_con .line2 {
+  right: 2px;
+}
+
+.recordBox {
+  width: 310px;
+  height: 280px;
+  /* background-color: aquamarine; */
+  border-radius: 5%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.recordBlack {
+  width: 200px;
+  height: 200px;
+  background: black;
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  margin-top: -100px;
+  border-radius: 50%;
+}
+
+.recordIn {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /* linear匀速
+  infinite 无限循环 */
+
+}
+
+.playing {
+  animation: circle 1.5s linear infinite;
+}
+
+.recordBlack .lines {
+  width: 180px;
+  height: 180px;
+  /* 放射状纹路 */
+  background: repeating-radial-gradient(black, black 5px, #1c1c1c 7px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.recordIn .cd {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.recordIn .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sun {
+  width: 100%;
+  height: 100%;
+  background: -webkit-linear-gradient(45deg,
+      transParent 35%,
+      rgba(255, 255, 255, 0.2) 45%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.2) 55%,
+      transParent);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fixed {
+  width: 40px;
+  height: 40px;
+  background: #939493;
+  border-radius: 50%;
+  border: 5px solid gray;
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+
+.arm {
+  width: 60px;
+  height: 110px;
+  /* border: 5px solid gray; */
+  position: absolute;
+  right: 13px;
+  top: 10px;
+  border: 10px solid #939393;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  /* 更改作用中心点 */
+  transform-origin: top right;
+  transform: skew(-20deg, -20deg);
+  border-radius: 0 0 30% 0;
+  /* animation: run 0.5s infinite both; */
+  animation-direction: alternate-reverse;
+}
+
+.playing_ {
+  animation: run 0.5s infinite both;
+}
+
+.arm::after {
+  content: '';
+  width: 20px;
+  height: 30px;
+  background: gray;
+  position: absolute;
+  top: 97px;
+  left: -21px;
+  transform: skew(20deg, 20deg) rotate(75deg);
+}
+
+@keyframes run {
+  0% {
+    transform: skew(-20deg, -20deg);
+  }
+
+  100% {
+    transform: skew(-20deg, -20deg) rotate(2deg);
+  }
+}
+
+@keyframes circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.comment_wrapper {
+  width: 25%;
+  height: 100%;
+  float: left;
+  overflow-y: scroll;
+}
+
+.comment_wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.title {
+  margin: 10px;
+}
+
+.comment_list dl {
+  width: 100%;
+  /* height: 80px; */
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.comment_list dt {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+}
+
+.comment_list dt img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.comment_list .name {
+  position: absolute;
+  left: 80px;
+  top: 10px;
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.comment_list .detail {
+  width: 68%;
+  color: rgba(83, 82, 82, 0.808);
+  margin: 0 10px 5px 80px;
+
+  /* position: absolute;
+  left: 80px;
+  top: 40px; */
+
+  /* 设置溢出隐藏 */
+  /* display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical; */
+}
+
+.audio_con {
+  width: 100%;
+  position: absolute;
+  bottom: -10px;
+}
+
+.myAudio {
+  width: 100%;
+
+}
+
+.video_con {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.video_con .video_dialog {
+  border-radius: 15px;
+  text-align: center;
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: black;
+}
+
+.video_con .mask{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+    }
+
+    div {
+      display: block;
+    }
+
+    .recordBox {
+      width: 310px;
+      height: 280px;
+      /* background-color: aquamarine; */
+      border-radius: 5%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .recordBlack {
+      width: 200px;
+      height: 200px;
+      background: black;
+      position: absolute;
+      left: 25px;
+      top: 50%;
+      margin-top: -100px;
+      border-radius: 50%;
+    }
+
+    .recordIn {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      /* linear匀速
+      infinite 无限循环 */
+      animation: circle 1s linear infinite;
+    }
+
+    .recordBlack .lines {
+      width: 180px;
+      height: 180px;
+      /* 放射状纹路 */
+      background: repeating-radial-gradient(black,black 5px,#1c1c1c 7px);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+
+    .recordIn .cd{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .recordIn .circle {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      background: black;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .sun {
+      width: 100%;
+      height: 100%;
+      background: -webkit-linear-gradient(45deg,
+      transParent 35%,
+      rgba(255,255,255,0.2) 45%,
+      rgba(255,255,255,0.3) 50%,
+      rgba(255,255,255,0.2) 55%,
+      transParent);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .fixed {
+      width: 40px;
+      height: 40px;
+      background: #939493;
+      border-radius: 50%;
+      border: 5px solid gray;
+      position: absolute;
+      right: 20px;
+      top: 40px;
+    }
+    .arm{
+      width: 60px;
+      height: 110px;
+      /* border: 5px solid gray; */
+      position: absolute;
+      right: 13px;
+      top: 10px;
+      border: 10px solid #939393;
+      border-left-color: transparent;
+      border-top-color: transparent;
+      /* 更改作用中心点 */
+      transform-origin: top right;
+      transform:skew(-20deg,-20deg);
+      border-radius: 0 0 30% 0;
+      animation: run 0.5s infinite both;
+      animation-direction: alternate-reverse;
+    }
+
+    .arm::after{
+      content: '';
+      width: 20px;
+      height: 30px;
+      background: gray;
+      position: absolute;
+      top:97px;
+      left:-21px;
+      transform: skew(20deg,20deg) rotate(75deg);
+    }
+
+    @keyframes run {
+      0%{
+        transform: skew(-20deg,-20deg);
+      }
+      100%{
+        transform: skew(-20deg,-20deg) rotate(2deg);
+      }
+    }
+
+    @keyframes circle {
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h3></h3>
+  <!-- 黑色唱片部分 -->
+  <div class="recordBox">
+    <div class="recordBlack">
+      <div class="recordIn">
+        <div class="lines"></div>
+        <img class="cd" src="./images/背景.jpeg"></img>
+        <!-- 圆心 -->
+        <div class="circle"></div>
+      </div>
+      <!-- 光 -->
+      <div class="sun"></div>
+    </div>
+    <div class="fixed">
+      <div class="arm"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
